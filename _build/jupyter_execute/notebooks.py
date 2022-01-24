@@ -72,5 +72,146 @@ lines = ax.plot(data)
 ax.legend(custom_lines, ['Cold', 'Medium', 'Hot']);
 
 
+# In[3]:
+
+
+import ipywidgets as widgets
+widgets.IntSlider(
+    value=7,
+    min=0,
+    max=10,
+    step=1,
+    description='Test:',
+    disabled=False,
+    continuous_update=False,
+    orientation='horizontal',
+    readout=True,
+    readout_format='d'
+)
+
+
+# In[4]:
+
+
+# Install a pip package in the current Jupyter kernel
+import sys
+get_ipython().system('{sys.executable} -m pip install numpy')
+
+
 # There is a lot more that you can do with outputs (such as including interactive outputs)
 # with your book. For more information about this, see [the Jupyter Book documentation](https://jupyterbook.org)
+
+# In[5]:
+
+
+import numpy as np
+
+
+# In[6]:
+
+
+from matplotlib import rcParams, cycler
+import matplotlib.pyplot as plt
+
+
+# In[7]:
+
+
+get_ipython().system('{sys.executable} -m pip install plotly')
+
+
+# In[8]:
+
+
+from matplotlib import rcParams, cycler
+import matplotlib.pyplot as plt
+import numpy as np
+plt.ion()
+
+
+# In[9]:
+
+
+import ipywidgets as widgets
+widgets.ColorPicker(
+    concise=False,
+    description='Pick a color',
+    value='blue',
+    disabled=False
+)
+
+
+# In[10]:
+
+
+import ipywidgets as widgets
+widgets.DatePicker(
+    description='Pick a Date',
+    disabled=False
+)
+
+
+# In[11]:
+
+
+import plotly.express as px
+df = px.data.iris()
+fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species")
+fig.show()
+
+
+# In[20]:
+
+
+from IPython.display import Image
+Image("peacock.jpg")
+
+
+# In[21]:
+
+
+from IPython.display import YouTubeVideo
+
+SalidaVideo = widgets.Output()
+
+with SalidaVideo:
+    display(YouTubeVideo('DsROfrRB-1k', width=500, height=500))
+    
+Salidas = widgets.HBox([SalidaVideo])
+display(Salidas)
+
+
+# In[24]:
+
+
+import ipywidgets as widgets
+widgets.Combobox(
+    # value='John',
+    placeholder='Choose Someone',
+    options=['Peter', 'Rimy', 'Pinky', 'Ringo'],
+    description='Combobox:',
+    ensure_option=True,
+    disabled=False
+)
+
+
+# In[ ]:
+
+
+import plotly.express as px
+df = px.data.tips()
+fig = px.parallel_categories(df, color="size", color_continuous_scale=px.colors.sequential.Inferno)
+fig
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
