@@ -17,34 +17,22 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import plotly.express as px
-df = px.data.iris()
-fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species")
-fig.show()
+import ipywidgets as widgets
+container2 = widgets.HBox([origin, textbox])
+widgets.VBox([container,
+              container2,
+              g])
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
-[1;31mImportError[0m                               Traceback (most recent call last)
-Input [1;32mIn [11][0m, in [0;36m<module>[1;34m[0m
-[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mexpress[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpx[39;00m
-[0;32m      2[0m df [38;5;241m=[39m px[38;5;241m.[39mdata[38;5;241m.[39miris()
-[0;32m      3[0m fig [38;5;241m=[39m px[38;5;241m.[39mscatter(df, x[38;5;241m=[39m[38;5;124m"[39m[38;5;124msepal_width[39m[38;5;124m"[39m, y[38;5;241m=[39m[38;5;124m"[39m[38;5;124msepal_length[39m[38;5;124m"[39m, color[38;5;241m=[39m[38;5;124m"[39m[38;5;124mspecies[39m[38;5;124m"[39m)
+[1;31mNameError[0m                                 Traceback (most recent call last)
+Input [1;32mIn [16][0m, in [0;36m<module>[1;34m[0m
+[0;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mipywidgets[39;00m [38;5;28;01mas[39;00m [38;5;21;01mwidgets[39;00m
+[1;32m----> 2[0m container2 [38;5;241m=[39m widgets[38;5;241m.[39mHBox([[43morigin[49m, textbox])
+[0;32m      3[0m widgets[38;5;241m.[39mVBox([container,
+[0;32m      4[0m               container2,
+[0;32m      5[0m               g])
 
-File [1;32m~\turingenv\lib\site-packages\plotly\express\__init__.py:10[0m, in [0;36m<module>[1;34m[0m
-[0;32m      8[0m pd [38;5;241m=[39m optional_imports[38;5;241m.[39mget_module([38;5;124m"[39m[38;5;124mpandas[39m[38;5;124m"[39m)
-[0;32m      9[0m [38;5;28;01mif[39;00m pd [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[1;32m---> 10[0m     [38;5;28;01mraise[39;00m [38;5;167;01mImportError[39;00m(
-[0;32m     11[0m         [38;5;124;03m"""\[39;00m
-[0;32m     12[0m [38;5;124;03mPlotly express requires pandas to be installed."""[39;00m
-[0;32m     13[0m     )
-[0;32m     15[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m_imshow[39;00m [38;5;28;01mimport[39;00m imshow
-[0;32m     16[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m_chart_types[39;00m [38;5;28;01mimport[39;00m (  [38;5;66;03m# noqa: F401[39;00m
-[0;32m     17[0m     scatter,
-[0;32m     18[0m     scatter_3d,
-[1;32m   (...)[0m
-[0;32m     51[0m     density_mapbox,
-[0;32m     52[0m )
-
-[1;31mImportError[0m: Plotly express requires pandas to be installed.
-ImportError: Plotly express requires pandas to be installed.
+[1;31mNameError[0m: name 'origin' is not defined
+NameError: name 'origin' is not defined
 
